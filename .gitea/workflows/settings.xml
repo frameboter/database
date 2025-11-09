@@ -4,26 +4,19 @@
                               http://maven.apache.org/xsd/settings-1.0.0.xsd">
 
     <activeProfiles>
-        <activeProfile>gitea</activeProfile>
+        <activeProfile>gitea-deploy</activeProfile>
     </activeProfiles>
 
     <profiles>
         <profile>
-            <id>gitea</id>
+            <id>gitea-deploy</id>
             <repositories>
                 <repository>
                     <id>central</id>
-                    <url>https://repo1.maven.org/maven2</url>
+                    <url>https://repo.maven.apache.org/maven2</url>
                 </repository>
                 <repository>
-                    <id>gitea_${OWNER}</id>
-                    <url>https://gitea.roboter5123.com/api/packages/${OWNER}/maven</url>
-                    <snapshots>
-                        <enabled>true</enabled>
-                    </snapshots>
-                </repository>
-                <repository>
-                    <id>gitea_frameboter</id>
+                    <id>gitea</id>
                     <url>https://gitea.roboter5123.com/api/packages/frameboter/maven</url>
                     <snapshots>
                         <enabled>true</enabled>
@@ -36,18 +29,9 @@
     <servers>
         <server>
             <id>gitea</id>
-            <username>${OWNER}</username>
-            <password>${ACCESS_TOKEN}</password>
-        </server>
-        <server>
-            <id>gitea_${OWNER}</id>
-            <username>${OWNER}</username>
-            <password>${ACCESS_TOKEN}</password>
-        </server>
-        <server>
-            <id>gitea_frameboter</id>
-            <username>${OWNER}</username>
-            <password>${ACCESS_TOKEN}</password>
+            <username>frameboter</username>
+            <password>${env.ACCESS_TOKEN}</password>
         </server>
     </servers>
+
 </settings>
