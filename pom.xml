@@ -40,11 +40,38 @@
         <finalName>database</finalName>
     </build>
 
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub frameboter Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/frameboter/database</url>
-        </repository>
-    </distributionManagement>
+ <profiles>
+        <profile>
+            <id>gitea-deploy</id>
+            <distributionManagement>
+                <repository>
+                    <id>gitea</id>
+                    <name>Gitea frameboter Maven Packages</name>
+                    <url>https://gitea.roboter5123.com/api/packages/frameboter/maven</url>
+                </repository>
+                <snapshotRepository>
+                    <id>gitea</id>
+                    <name>Gitea frameboter Maven Snapshots</name>
+                    <url>https://gitea.roboter5123.com/api/packages/frameboter/maven</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+
+        <profile>
+            <id>github-deploy</id>
+            <distributionManagement>
+                <repository>
+                    <id>github</id>
+                    <name>GitHub frameboter Apache Maven Packages</name>
+                    <url>https://maven.pkg.github.com/frameboter</url>
+                </repository>
+                <snapshotRepository>
+                    <id>github</id>
+                    <name>GitHub frameboter Apache Maven Snapshots</name>
+                    <url>https://maven.pkg.github.com/frameboter</url>
+                </snapshotRepository>
+            </distributionManagement>
+        </profile>
+
+    </profiles>
 </project>
