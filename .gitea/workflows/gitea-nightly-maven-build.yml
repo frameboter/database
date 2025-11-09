@@ -22,7 +22,7 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-          server-id: gitea
+          server-id: gitea-deploy
           settings-path: ${{ gitea.workspace }}
 
       - name: Set up Maven
