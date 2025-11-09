@@ -45,12 +45,12 @@
             <id>gitea-deploy</id>
             <distributionManagement>
                 <repository>
-                    <id>gitea</id>
+                    <id>gitea-deploy</id>
                     <name>Gitea frameboter Maven Packages</name>
                     <url>https://gitea.roboter5123.com/api/packages/frameboter/maven</url>
                 </repository>
                 <snapshotRepository>
-                    <id>gitea</id>
+                    <id>gitea-deploy</id>
                     <name>Gitea frameboter Maven Snapshots</name>
                     <url>https://gitea.roboter5123.com/api/packages/frameboter/maven</url>
                 </snapshotRepository>
@@ -61,12 +61,12 @@
             <id>github-deploy</id>
             <distributionManagement>
                 <repository>
-                    <id>github</id>
+                    <id>github-deploy</id>
                     <name>GitHub frameboter Apache Maven Packages</name>
                     <url>https://maven.pkg.github.com/frameboter</url>
                 </repository>
                 <snapshotRepository>
-                    <id>github</id>
+                    <id>github-deploy</id>
                     <name>GitHub frameboter Apache Maven Snapshots</name>
                     <url>https://maven.pkg.github.com/frameboter</url>
                 </snapshotRepository>
