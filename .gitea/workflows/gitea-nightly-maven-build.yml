@@ -32,12 +32,12 @@ jobs:
         run: mvn -B package -s $GITEA_WORKSPACE/.gitea/workflows/settings.xml --file pom.xml
         env:
           ACCESS_TOKEN: ${{ secrets.GITEA_TOKEN }}
-          OWNER: ${{ GITEA.repository_owner }}
-          REPO_NAME: ${{ GITEA.event.repository.name }}
+          OWNER: ${{ gitea.repository_owner }}
+          REPO_NAME: ${{ gitea.event.repository.name }}
 
-      - name: Publish to GITEA Packages Apache Maven
+      - name: Publish to Gitea Packages Apache (Maven)
         run: mvn deploy -s $GITEA_WORKSPACE/.gitea/workflows/settings.xml
         env:
-          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.GITEA_TOKEN }}
           OWNER: ${{ gitea.repository_owner }}
           REPO_NAME: ${{ gitea.event.repository.name }}
