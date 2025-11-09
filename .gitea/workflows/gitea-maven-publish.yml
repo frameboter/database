@@ -8,14 +8,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-
     steps:
-      - name: Install dependencies for Maven
-        run: |
-          apt-get update
-          apt-get install -y openjdk-21-jdk maven
-          java -version
-          mvn -version
 
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -27,6 +20,11 @@ jobs:
           distribution: 'temurin'
           server-id: gitea
           settings-path: ${{ gitea.workspace }}
+
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v5
+        with:
+          maven-version: 3.9.6
 
       - name: Build with Maven
         run: mvn -B package -s $GITEA_WORKSPACE/.gitea/workflows/settings.xml --file pom.xml
