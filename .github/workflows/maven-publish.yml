@@ -7,10 +7,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: maven:3.9-eclipse-temurin-21
+
 
     steps:
+      - name: Install dependencies for Maven
+        run: |
+          apt-get update
+          apt-get install -y openjdk-21-jdk maven
+          java -version
+          mvn -version
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
