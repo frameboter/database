@@ -16,7 +16,7 @@
                     <url>https://repo.maven.apache.org/maven2</url>
                 </repository>
                 <repository>
-                    <id>gitea</id>
+                    <id>gitea-deploy</id>
                     <url>https://gitea.roboter5123.com/api/packages/frameboter/maven</url>
                     <snapshots>
                         <enabled>true</enabled>
@@ -28,7 +28,7 @@
 
     <servers>
         <server>
-            <id>gitea</id>
+            <id>gitea-deploy</id>
             <username>frameboter</username>
             <password>${env.ACCESS_TOKEN}</password>
         </server>
