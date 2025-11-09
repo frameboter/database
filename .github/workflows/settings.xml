@@ -11,13 +11,10 @@
         <profile>
             <id>gitea</id>
             <repositories>
-                <!-- Maven Central -->
                 <repository>
                     <id>central</id>
                     <url>https://repo1.maven.org/maven2</url>
                 </repository>
-
-                <!-- Your user’s Gitea package registry -->
                 <repository>
                     <id>gitea_${OWNER}</id>
                     <url>https://gitea.roboter5123.com/api/packages/${OWNER}/maven</url>
@@ -25,8 +22,6 @@
                         <enabled>true</enabled>
                     </snapshots>
                 </repository>
-
-                <!-- Shared org or another user’s packages (e.g., frameboter) -->
                 <repository>
                     <id>gitea_frameboter</id>
                     <url>https://gitea.roboter5123.com/api/packages/frameboter/maven</url>
