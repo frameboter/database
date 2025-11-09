@@ -31,14 +31,14 @@ jobs:
           maven-version: 3.9.6
 
       - name: Build with Maven
-        run: mvn -B package -s $GITEA_WORKSPACE/${{ gitea.repository_owner }}/${{ gitea.event.repository.name }}/.gitea/workflows/settings.xml --file pom.xml
+        run: mvn -B package -s ./.gitea/workflows/settings.xml --file pom.xml
         env:
           ACCESS_TOKEN: ${{ secrets.GITEA_TOKEN }}
           OWNER: ${{ gitea.repository_owner }}
           REPO_NAME: ${{ gitea.event.repository.name }}
 
       - name: Publish to Gitea Packages Apache (Maven)
-        run: mvn deploy -s $GITEA_WORKSPACE/.gitea/workflows/settings.xml
+        run: mvn deploy -s ./.gitea/workflows/settings.xml
         env:
           ACCESS_TOKEN: ${{ secrets.GITEA_TOKEN }}
           OWNER: ${{ gitea.repository_owner }}
