@@ -47,12 +47,12 @@
                 <repository>
                     <id>gitea-deploy</id>
                     <name>Gitea frameboter Maven Packages</name>
-                    <url>https://gitea.roboter5123.com/api/packages/frameboter/database/maven</url>
+                    <url>https://gitea.roboter5123.com/api/packages/frameboter/maven</url>
                 </repository>
                 <snapshotRepository>
                     <id>gitea-deploy</id>
                     <name>Gitea frameboter Maven Snapshots</name>
-                    <url>https://gitea.roboter5123.com/api/packages/frameboter/database/maven</url>
+                    <url>https://gitea.roboter5123.com/api/packages/frameboter/maven</url>
                 </snapshotRepository>
             </distributionManagement>
         </profile>
