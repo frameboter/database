@@ -6,11 +6,10 @@ name: Stable
 on:
   release:
     types: [ created ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: maven:3.9-eclipse-temurin-21
     permissions:
       contents: read
       packages: write
