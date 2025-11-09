@@ -30,7 +30,7 @@
         <server>
             <id>github-deploy</id>
             <username>${env.GITHUB_ACTOR}</username>
-            <password>${env.GITHUB_TOKEN}</password>
+            <password>${env.ACCESS_TOKEN}</password>
         </server>
     </servers>
 
